@@ -108,12 +108,9 @@ jobs:
           pathTarget: ./libs
 # ========================================================================================================= Generate MakeFile and Build
 
-      - uses: actions/setup-node@v1
+      - name: macOS - Install appdmg
         if: matrix.platform == 'macos-latest'
-        with:
-          node-version: '10.x'
-      - run: npm install -g appdmg
-        if: matrix.platform == 'macos-latest'
+        run: npm install -g appdmg
       - name: macOS - ${{ matrix.qt_version }} - Generate Dependencies and Build
         shell: bash
         if: matrix.platform == 'macos-latest'
