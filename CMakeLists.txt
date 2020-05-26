@@ -29,9 +29,6 @@ add_definitions(-DQV2RAY_VERSION_STRING="${QV2RAY_VERSION_STRING}")
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-if(MSVC)
-    set(CMAKE_CXX_EXTENSIONS OFF)
-endif()
 
 find_package(Qt5 5.11 COMPONENTS Core Gui Widgets Network REQUIRED)
 find_package(Threads REQUIRED)
