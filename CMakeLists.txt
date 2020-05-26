@@ -259,6 +259,7 @@ add_custom_target(lupdate
 set_target_properties(lupdate PROPERTIES EXCLUDE_FROM_ALL TRUE)
 
 if(APPLE)
+    configure_file("${CMAKE_SOURCE_DIR}/assets/package_dmg.json.in" "${CMAKE_SOURCE_DIR}/assets/package_dmg.json" @ONLY)
     find_package(Iconv REQUIRED)
     find_library(CARBON NAMES Carbon)
     find_library(COCOA NAMES Cocoa)
