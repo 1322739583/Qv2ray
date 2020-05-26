@@ -341,6 +341,5 @@ if(WIN32)
         COMMAND windeployqt ${CMAKE_BINARY_DIR}/qv2ray.exe --compiler-runtime --verbose 2 --dir ${CMAKE_BINARY_DIR}/winqt/
         )
     install(DIRECTORY ${CMAKE_BINARY_DIR}/winqt/ DESTINATION .)
-    set(CMAKE_INSTALL_SYSTEM_RUNTIME_DESTINATION .)
-    include(InstallRequiredSystemLibraries)
+    include(cmake/deployment.cmake)
 endif()
